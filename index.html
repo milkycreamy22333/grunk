@@ -6,68 +6,58 @@
     <title>Modern Website</title>
     
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="/css/about.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
+    <!-- Custom CSS -->
     <style>
-        /* Previous styles from the first response */
-        .hero-section {
-            background-color: #f8f9fa;
-            padding: 100px 0;
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --light-bg: #f8f9fa;
         }
         
-        .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            color: #333;
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
         }
-        
-        /* Add new styles for content formatting */
-        .content-container {
-            max-width: 1200px;
-            margin: 0 auto;
+
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        }
+
+        .nav-link {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .container {
             padding: 20px;
         }
-        
-        .feature-list {
-            list-style: none;
-            padding: 0;
-            margin: 30px 0;
+
+        .about-section {
+            background-color: var(--light-bg);
+            padding: 80px 0;
         }
-        
-        .feature-item {
-            margin-bottom: 15px;
-        }
-        
-        /* About page styles */
-        .about-content {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            padding: 30px;
-        }
-        
-        /* Contact form styles */
+
         .contact-form {
-            display: flex;
-            flex-direction: column;
-            max-width: 500px;
-            margin: 20px auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,.1);
         }
     </style>
 </head>
 <body>
 
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
-        <a class="navbar-brand" href="#">Modern Website</a>
+        <a class="nav-link" href="#">Home</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
             </ul>
@@ -75,96 +65,43 @@
     </div>
 </nav>
 
-<!-- Hero Section -->
-<div class="hero-section">
-    <div class="container text-center">
+<!-- Main Content -->
+<div class="container">
+    <!-- Hero Section -->
+    <header class="mb-4">
         <h1>Welcome to Our Modern Website</h1>
-        <p>Experience the future of web design with our innovative solutions and cutting-edge technology.</p>
-        
-        <!-- Feature Cards -->
-        <div class="row mt-5">
-            <div class="col-md-4 mb-4">
-                <div class="card feature-card">
-                    <div class="card-body">
-                        <h5>Responsive Design</h5>
-                        <p>Our websites look great on all devices, from desktops to mobile phones.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card feature-card">
-                    <div class="card-body">
-                        <h5>Fast Performance</h5>
-                        <p>Lightning-fast loading times and smooth interactions for the best user experience.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card feature-card">
-                    <div class="card-body">
-                        <h5>Modern Features</h5>
-                        <p>Stay ahead with the latest web technologies and tools to deliver exceptional results.</p>
-                    </div>
-                </div>
-            </div>
+        <p>Creating innovative solutions for tomorrow's challenges.</p>
+    </header>
+
+    <div class="row g-4 mb-5">
+        <div class="col-md-6">
+            <!-- About Section -->
+            <section class="about-section">
+                <h2>About Us</h2>
+                <p>We are a forward-thinking company dedicated to delivering exceptional digital experiences. Our mission is to help businesses grow and succeed in the ever-evolving digital landscape.</p>
+                
+                <!-- Add more content here -->
+            </section>
         </div>
 
-        <!-- Call to Action -->
-        <a href="#contact" class="btn btn-primary mt-4">Get Started Today</a>
-    </div>
-</div>
-
-<!-- About Section -->
-<div id="about" class="py-5">
-    <div class="container">
-        <h2 class="section-title mb-5">About Us</h2>
-        
-        <div class="content-container">
-            <p>Since 2020, we've been dedicated to providing high-quality web solutions for businesses of all sizes. Our team of experts combines creativity with technical excellence to deliver websites that not only look great but also drive results.</p>
-            
-            <div class="about-content mt-5">
-                <h3>Our Expertise</h3>
-                <ul class="feature-list">
-                    <li class="feature-item">Web Development</li>
-                    <li class="feature-item">UI/UX Design</li>
-                    <li class="feature-item">Mobile Optimization</li>
-                    <li class="feature-item">SEO & Marketing</li>
-                </ul>
-            </div>
-
-            <p>With years of experience and a commitment to continuous learning, we're here to help you achieve your digital goals. Let's build something amazing together!</p>
+        <div class="col-md-6">
+            <!-- Call to Action -->
+            <a href="#contact" class="btn btn-primary">Get Started</a>
         </div>
     </div>
-</div>
 
-<!-- Contact Section -->
-<div id="contact" class="py-5 bg-light">
-    <div class="container">
-        <h2 class="section-title mb-5">Contact Us</h2>
+    <!-- More Content -->
+    <div class="container about-section">
+        <h2>Our Services</h2>
+        <p>We offer a wide range of digital solutions including web development, mobile apps, cloud services, and more.</p>
         
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name" class="form-control mb-3">
-            <input type="email" placeholder="Your Email" class="form-control mb-3">
-            <textarea rows="4" placeholder="Your Message" class="form-control mb-3"></textarea>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-        </form>
-
-        <!-- Alternative Contact Info -->
-        <div class="mt-5 text-center">
-            <p>Call us: (555) 123-4567</p>
-            <p>Email: info@example.com</p>
-            <p>Address: 123 Tech Street, Digital City</p>
-        </div>
+        <!-- Add service cards or features here -->
     </div>
+
 </div>
 
-<!-- Footer -->
-<footer class="bg-dark text-white py-4">
-    <div class="container text-center">
-        <p>&copy; 2023 Modern Website. All rights reserved.</p>
-    </div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
